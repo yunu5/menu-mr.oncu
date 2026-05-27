@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Mr. Öncü | Menu</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+  --orange:#F2A534;
+  --black:#0E0E0E;
+  --card:#181818;
+  --soft:#232323;
+  --text:#F8F8F8;
+  --muted:#B8B8B8;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Cairo',sans-serif;
+  background:var(--black);
+  color:var(--text);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+
+.hero{
+  position:relative;
+  min-height:48vh;
+  padding:60px 22px 50px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  overflow:hidden;
+
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,.45), rgba(0,0,0,.92)),
+    url('https://images.unsplash.com/photo-1529006557810-274b9b2fc783?q=80&w=1400&auto=format&fit=crop');
+
+  background-size:cover;
+  background-position:center;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at top, rgba(242,165,52,.25), transparent 45%);
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  width:100%;
+  max-width:600px;
+}
+
+.logo{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  object-fit:cover;
+  border:5px solid rgba(255,255,255,.08);
+  box-shadow:0 15px 50px rgba(0,0,0,.45);
+  margin-bottom:22px;
+  background:#fff;
+}
+
+.hero h1{
+  font-size:3rem;
+  font-weight:800;
+  line-height:1;
+  margin-bottom:12px;
+}
+
+.hero p{
+  color:rgba(255,255,255,.8);
+  line-height:1.9;
+  font-size:1rem;
+}
+
+.hero-meta{
+  margin-top:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  color:#ddd;
+  font-size:.95rem;
+}
+
+.container{
+  width:min(760px, calc(100% - 18px));
+  margin:auto;
+  margin-top:-30px;
+  position:relative;
+  z-index:3;
+}
+
+.section{
+  margin-bottom:38px;
+}
+
+.section-header{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:18px;
+  padding-inline:4px;
+}
+
+.section-header h2{
+  color:var(--orange);
+  font-size:1rem;
+  letter-spacing:.14em;
+  font-weight:800;
+}
+
+.section-line{
+  flex:1;
+  height:1px;
+  background:linear-gradient(to left, rgba(242,165,52,.65), transparent);
+}
+
+.card{
+  background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:28px;
+  padding:14px;
+  display:flex;
+  gap:14px;
+  margin-bottom:14px;
+  backdrop-filter:blur(12px);
+  transition:.25s ease;
+}
+
+.card:hover{
+  transform:translateY(-2px);
+  border-color:rgba(242,165,52,.22);
+}
+
+.food{
+  width:100px;
+  height:100px;
+  border-radius:22px;
+  object-fit:cover;
+  flex-shrink:0;
+  background:#242424;
+}
+
+.placeholder{
+  width:100px;
+  height:100px;
+  border-radius:22px;
+  background:#242424;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+}
+
+.item-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:10px;
+}
+
+.item-name{
+  font-size:1.2rem;
+  font-weight:800;
+  line-height:1.4;
+}
+
+.price{
+  color:var(--orange);
+  font-weight:800;
+  font-size:1.1rem;
+  white-space:nowrap;
+}
+
+.desc{
+  color:var(--muted);
+  margin-top:8px;
+  line-height:1.8;
+  font-size:.95rem;
+}
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin-top:12px;
+  padding:7px 12px;
+  border-radius:999px;
+  font-size:.72rem;
+  font-weight:800;
+  letter-spacing:.08em;
+}
+
+.popular{
+  background:rgba(242,165,52,.14);
+  color:#FFD087;
+}
+
+.new{
+  background:rgba(95,170,255,.14);
+  color:#9ED0FF;
+}
+
+.spicy{
+  background:rgba(255,80,80,.14);
+  color:#FFB2B2;
+}
+
+.veg{
+  background:rgba(90,190,120,.14);
+  color:#B4F2C1;
+}
+
+.footer{
+  text-align:center;
+  color:#868686;
+  line-height:1.9;
+  padding:30px 18px 120px;
+  font-size:.9rem;
+}
+
+.whatsapp{
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  padding:14px;
+  background:rgba(0,0,0,.85);
+  backdrop-filter:blur(15px);
+  border-top:1px solid rgba(255,255,255,.05);
+}
+
+.whatsapp a{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  width:min(760px, 100%);
+  margin:auto;
+  text-decoration:none;
+  background:linear-gradient(135deg, #F2A534, #FFBC58);
+  color:#111;
+  padding:18px;
+  border-radius:20px;
+  font-weight:800;
+  font-size:1rem;
+  box-shadow:0 12px 40px rgba(242,165,52,.25);
+}
+
+@media(max-width:640px){
+
+  .hero h1{
+    font-size:2.4rem;
+  }
+
+  .logo{
+    width:104px;
+    height:104px;
+  }
+
+  .food,
+  .placeholder{
+    width:88px;
+    height:88px;
+  }
+
+  .item-name{
+    font-size:1.05rem;
+  }
+
+  .desc{
+    font-size:.9rem;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <img
+      src="logo.jpg"
+      class="logo"
+      alt="logo"
+      onerror="this.style.display='none'"
+    >
+
+    <h1 id="restaurant-name">Mr. Öncü</h1>
+
+    <p id="restaurant-subtitle">
+      ألذ وجبات الدونر والمشاوي بطعم مميز وجودة عالية
+    </p>
+
+    <div class="hero-meta">
+      <span id="restaurant-hours">يومياً</span>
+      <span>•</span>
+      <span id="restaurant-timing">10:00 صباحاً - 12:00 ليلاً</span>
+    </div>
+
+  </div>
+
+</section>
+
+<main class="container" id="menu-root"></main>
+
+<div class="footer">
+  الرجاء إبلاغ الموظفين في حال وجود حساسية تجاه أي مكون غذائي.<br>
+  بعض الوجبات قد تتغير حسب التوفر اليومي.
+</div>
+
+<div class="whatsapp">
+  <a id="wa-link" href="#" target="_blank">
+    اطلب الآن عبر واتساب
+  </a>
+</div>
+
+<script>
+
+const BADGES = {
+  popular:'badge popular',
+  new:'badge new',
+  spicy:'badge spicy',
+  veg:'badge veg'
+};
+
+function imageHTML(path){
+
+  if(!path){
+    return `
+      <div class="placeholder">
+        🍽️
+      </div>
+    `;
+  }
+
+  return `
+    <img
+      src="${path}"
+      class="food"
+      loading="lazy"
+      onerror="this.outerHTML='<div class=placeholder>🍽️</div>'"
+    >
+  `;
+}
+
+function itemHTML(item){
+
+  const badge =
+    item.badge && BADGES[item.badge]
+    ? `<div class="${BADGES[item.badge]}">${item.badge}</div>`
+    : '';
+
+  return `
+    <div class="card">
+
+      ${imageHTML(item.image)}
+
+      <div style="flex:1">
+
+        <div class="item-top">
+          <div class="item-name">${item.name}</div>
+          <div class="price">$${item.price}</div>
+        </div>
+
+        <div class="desc">
+          ${item.description}
+        </div>
+
+        ${badge}
+
+      </div>
+
+    </div>
+  `;
+}
+
+function categoryHTML(category){
+
+  return `
+    <section class="section">
+
+      <div class="section-header">
+        <div class="section-line"></div>
+        <h2>${category.label}</h2>
+      </div>
+
+      ${category.items.map(itemHTML).join('')}
+
+    </section>
+  `;
+}
+
+async function loadMenu(){
+
+  try{
+
+    const res = await fetch('menu.json');
+
+    if(!res.ok){
+      throw new Error('Menu fetch failed');
+    }
+
+    const data = await res.json();
+
+    const r = data.restaurant;
+
+    document.title = r.name + ' | Menu';
+
+    document.getElementById('restaurant-name').textContent = r.name;
+    document.getElementById('restaurant-subtitle').textContent = r.subtitle;
+    document.getElementById('restaurant-hours').textContent = r.hours;
+    document.getElementById('restaurant-timing').textContent = r.timing;
+
+    const msg = encodeURIComponent(r.whatsapp_message || 'مرحباً');
+
+    document.getElementById('wa-link').href =
+      `https://wa.me/${r.whatsapp}?text=${msg}`;
+
+    document.getElementById('menu-root').innerHTML =
+      data.categories.map(categoryHTML).join('');
+
+  }catch(err){
+
+    console.error(err);
+
+    document.getElementById('menu-root').innerHTML = `
+      <div style="
+        text-align:center;
+        color:#ddd;
+        padding:80px 20px;
+      ">
+        تعذر تحميل القائمة
+      </div>
+    `;
+  }
+}
+
+loadMenu();
+
+</script>
+
+</body>
+</html>
