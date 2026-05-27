@@ -13,7 +13,7 @@
       "label": "دونر دجاج (Chicken Doner)",
       "items": [
         { "name": "دونر دجاج", "price": 3500, "image": "images/1.jpg" },
-        { "name": "دونر دجاج سياسي", "price": 3750 },
+        { "name": "دونر دجاج سياسي", "price": 3750, "image": "https://images.deliveryhero.io/image/fd-tr/LH/rcax-listing.jpg" },
         { "name": "دونر دجاج بالجبن", "price": 4250 }
       ]
     },
