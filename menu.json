@@ -12,7 +12,7 @@
       "id": "doner_chicken",
       "label": "دونر دجاج (Chicken Doner)",
       "items": [
-        { "name": "دونر دجاج", "price": 3500 },
+        { "name": "دونر دجاج", "price": 3500, "image": "images/1.jpg" },
         { "name": "دونر دجاج سياسي", "price": 3750 },
         { "name": "دونر دجاج بالجبن", "price": 4250 }
       ]
