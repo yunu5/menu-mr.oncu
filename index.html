@@ -247,10 +247,11 @@ body{
   bottom:0;
   left:0;
   right:0;
-  padding:14px;
-  background:rgba(0,0,0,.85);
-  backdrop-filter:blur(15px);
-  border-top:1px solid rgba(255,255,255,.05);
+  padding:10px 14px 18px;
+  background:linear-gradient(to top, rgba(0,0,0,.96), rgba(0,0,0,.72));
+  backdrop-filter:blur(18px);
+  border-top:1px solid rgba(255,255,255,.04);
+  z-index:50;
 }
 
 .whatsapp a{
@@ -261,15 +262,28 @@ body{
   width:min(760px, 100%);
   margin:auto;
   text-decoration:none;
-  background:linear-gradient(135deg, #F2A534, #FFBC58);
+
+  background:linear-gradient(135deg,#F2A534,#FFBC58);
+
   color:#111;
-  padding:18px;
-  border-radius:20px;
+  padding:15px 18px;
+
+  border-radius:16px;
+
   font-weight:800;
-  font-size:1rem;
-  box-shadow:0 12px 40px rgba(242,165,52,.25);
+  font-size:.95rem;
+
+  box-shadow:
+    0 6px 20px rgba(242,165,52,.18),
+    inset 0 1px 0 rgba(255,255,255,.18);
+
+  transition:.2s ease;
 }
 
+.whatsapp a:active{
+  transform:scale(.98);
+}
+  
 @media(max-width:640px){
 
   .hero h1{
@@ -385,13 +399,20 @@ function itemHTML(item){
       <div style="flex:1">
 
         <div class="item-top">
-          <div class="item-name">${item.name}</div>
-          <div class="price">${item.price}</div>
-        </div>
+  <div class="item-name" style="text-align:center;width:100%;">
+    ${item.name}
+  </div>
 
-        <div class="desc">
-          ${item.description}
-        </div>
+  <div class="price">
+    ${item.price}
+  </div>
+</div>
+
+${item.description ? `
+  <div class="desc">
+    ${item.description}
+  </div>
+` : ''}
 
         ${badge}
 
