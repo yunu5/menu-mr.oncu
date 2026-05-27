@@ -1,139 +1,47 @@
 {
   "restaurant": {
-    "name": "The Table",
-    "subtitle": "Modern Mediterranean Cuisine",
-    "hours": "Tue – Sun",
-    "timing": "12 pm – 11 pm",
-    "whatsapp": "1234567890",
-    "whatsapp_message": "Hello, I'd like to place an order"
+    "name": "Mr. Öncü Döner Restaurant",
+    "subtitle": "Kirkuk - Hay Aden",
+    "hours": "Open Daily",
+    "timing": "Available for Orders",
+    "whatsapp": "07731610962",
+    "whatsapp_message": "Hello, I would like to place an order from your menu."
   },
   "categories": [
     {
-      "id": "starters",
-      "label": "Starters",
+      "id": "doner_chicken",
+      "label": "دونر دجاج (Chicken Doner)",
       "items": [
-        {
-          "id": 1,
-          "name": "Burrata Caprese",
-          "description": "Creamy burrata, heirloom tomatoes, fresh basil oil, aged balsamic glaze",
-          "price": 14,
-          "badge": "popular",
-          "image": "images/burrata-caprese.jpg"
-        },
-        {
-          "id": 2,
-          "name": "Hummus Trio",
-          "description": "Classic, roasted red pepper & smoky eggplant — warm pita, za'atar oil",
-          "price": 12,
-          "badge": "veg",
-          "image": "images/hummus-trio.jpg"
-        },
-        {
-          "id": 3,
-          "name": "Crispy Calamari",
-          "description": "Lightly dusted in seasoned semolina, served with lemon aioli & fresh herbs",
-          "price": 13,
-          "badge": "new",
-          "image": ""
-        },
-        {
-          "id": 4,
-          "name": "Spiced Lamb Kebab",
-          "description": "Minced lamb, cumin & coriander, pomegranate molasses dip, grilled flatbread",
-          "price": 16,
-          "badge": "",
-          "image": ""
-        }
+        { "name": "دونر دجاج", "price": 3500 },
+        { "name": "دونر دجاج سياسي", "price": 3750 },
+        { "name": "دونر دجاج بالجبن", "price": 4250 }
       ]
     },
     {
-      "id": "mains",
-      "label": "Main Courses",
+      "id": "doner_meat",
+      "label": "دونر لحم (Meat Doner)",
       "items": [
-        {
-          "id": 5,
-          "name": "Grilled Sea Bass",
-          "description": "Whole sea bass, lemon-caper butter, wilted greens, crushed new potatoes",
-          "price": 32,
-          "badge": "popular",
-          "image": "images/sea-bass.jpg"
-        },
-        {
-          "id": 6,
-          "name": "Harissa Chicken",
-          "description": "Free-range half chicken, slow-roasted harissa marinade, couscous, yogurt",
-          "price": 26,
-          "badge": "spicy",
-          "image": ""
-        },
-        {
-          "id": 7,
-          "name": "Slow-Braised Short Rib",
-          "description": "12-hour braised beef rib, saffron risotto, gremolata, crispy shallots",
-          "price": 38,
-          "badge": "",
-          "image": ""
-        },
-        {
-          "id": 8,
-          "name": "Wild Mushroom Pasta",
-          "description": "Hand-rolled pappardelle, truffle cream, porcini, pecorino, toasted pine nuts",
-          "price": 24,
-          "badge": "veg",
-          "image": ""
-        },
-        {
-          "id": 9,
-          "name": "Prawn & Chorizo Skillet",
-          "description": "Tiger prawns, smoky chorizo, cherry tomatoes, white wine broth, sourdough",
-          "price": 29,
-          "badge": "new",
-          "image": ""
-        }
+        { "name": "دونر لحم", "price": 4000 },
+        { "name": "دونر لحم سياسي", "price": 4250 }
       ]
     },
     {
-      "id": "sides",
-      "label": "Sides",
+      "id": "mexicano_meat",
+      "label": "مكسيكانو لحم (Meat Mexicano)",
       "items": [
-        {
-          "id": 10,
-          "name": "Roasted Root Vegetables",
-          "description": "Seasonal roots, honey glaze, thyme, smoked sea salt",
-          "price": 8,
-          "badge": "veg",
-          "image": ""
-        },
-        {
-          "id": 11,
-          "name": "Fattoush Salad",
-          "description": "Romaine, cucumber, radish, crispy pita chips, sumac-lemon dressing",
-          "price": 9,
-          "badge": "veg",
-          "image": ""
-        }
+        { "name": "مكسيكانو لحم بالجبن السورية", "price": 7000 },
+        { "name": "مكسيكانو لحم بالجبن سياسي", "price": 7000 },
+        { "name": "وجبة مكسيكانو لحم سياسي", "price": 8000 }
       ]
     },
     {
-      "id": "desserts",
-      "label": "Desserts",
+      "id": "burgers_chicken",
+      "label": "بركر دجاج (Chicken Burger)",
       "items": [
-        {
-          "id": 12,
-          "name": "Burnt Basque Cheesecake",
-          "description": "Silky Basque-style, caramelised top, seasonal berry compote, crème fraîche",
-          "price": 11,
-          "badge": "popular",
-          "image": "images/cheesecake.jpg"
-        },
-        {
-          "id": 13,
-          "name": "Pistachio Baklava",
-          "description": "House-made with rose water syrup, crushed pistachios, vanilla ice cream",
-          "price": 9,
-          "badge": "",
-          "image": ""
-        }
+        { "name": "بركر دجاج عادي", "price": 3000 },
+        { "name": "بركر دجاج بالجبن", "price": 3500 },
+        { "name": "بركر دجاج سياسي بالجبن", "price": 3750 },
+        { "name": "وجبة بركر دجاج", "price": 5000 }
       ]
     }
   ]
