@@ -14,15 +14,15 @@
       "items": [
         { "name": "دونر دجاج", "price": 3500, "image": "images/1.jpg" },
         { "name": "دونر دجاج سياسي", "price": 3750, "image": "https://images.deliveryhero.io/image/fd-tr/LH/rcax-listing.jpg" },
-        { "name": "دونر دجاج بالجبن", "price": 4250 }
+        { "name": "دونر دجاج بالجبن", "price": 4250, "image": "images/3.jpg" }
       ]
     },
     {
       "id": "doner_meat",
       "label": "دونر لحم (Meat Doner)",
       "items": [
-        { "name": "دونر لحم", "price": 4000 },
-        { "name": "دونر لحم سياسي", "price": 4250 }
+        { "name": "دونر لحم", "price": 4000, "image": "images/4.jpg" },
+        { "name": "دونر لحم سياسي", "price": 4250, "image": "images/5.jpg" }
       ]
     },
     {
@@ -38,10 +38,10 @@
       "id": "burgers_chicken",
       "label": "بركر دجاج (Chicken Burger)",
       "items": [
-        { "name": "بركر دجاج عادي", "price": 3000 },
-        { "name": "بركر دجاج بالجبن", "price": 3500 },
-        { "name": "بركر دجاج سياسي بالجبن", "price": 3750 },
-        { "name": "وجبة بركر دجاج", "price": 5000 }
+        { "name": "بركر دجاج عادي", "price": 3000, "image": "images/6.jpg" },
+        { "name": "بركر دجاج بالجبن", "price": 3500, "image": "images/6.jpg" },
+        { "name": "بركر دجاج سياسي بالجبن", "price": 3750, "image": "images/6.jpg" },
+        { "name": "وجبة بركر دجاج", "price": 5000, "image": "images/7.jpg" }
       ]
     }
   ]
